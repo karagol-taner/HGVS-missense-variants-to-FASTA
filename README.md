@@ -16,17 +16,16 @@ If the script fails to automatically install Biopython, you can install it manua
    ```
 
 ### Usage
-1. Running the Script:
-  - Option 1: Execute the HGVS_to_FASTA.py script using Python. Follow the prompts to input the required information, including the protein/gene name, wild-type sequence, variant notations, and the desired filename for the output FASTA file.
-    For runing the script you can download the [.py file](HGVS_to_FASTA.py) and open a terminal/command prompt. Navigate to the directory where the .py file is located, and then executing the script using the following command:
-    ```
-    python HGVS_to_FASTA.py
-    ```
-  
-  - Option 2: You can run the Python script directly from Google Colab: [HGVS-to-FASTA.ipynb on Google Colab](https://colab.research.google.com/drive/1yiqgo0joTMsBdOz57pTI6i5LgBDWO3zw?usp=sharing).
+1. Follow the prompts to input the required information, including the protein/gene name, wild-type sequence, variant notations, and the desired filename for the output FASTA file. For running the the Python script:
+    - Option 1: You can run the script directly from Google Colab: [HGVS-to-FASTA.ipynb on Google Colab](https://colab.research.google.com/drive/1yiqgo0joTMsBdOz57pTI6i5LgBDWO3zw?usp=sharing).
     
+    - Option 2: Execute the HGVS_to_FASTA.py script using Python. 
+    For runing the script you can download the [.py file](HGVS_to_FASTA.py) and open a terminal/command prompt. Navigate to the directory where the .py file is located, and then executing the script using the following command:
+      ```
+      python HGVS_to_FASTA.py
+      ```
   
-2. ! NEW UPDATE Input types for variants
+2. Input types for variants
    - 1-Manual Input
    - 2-File Input: Users can input variant notations from a text file, making it convenient to handle large lists of variants.
      If you choose to input variant notations from a text file, the file should contain the variant notations in the following format for nucleotide:
