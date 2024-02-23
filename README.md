@@ -22,3 +22,6 @@ If the script fails to automatically install Biopython, you can install it manua
 
 3. Viewing Results: After execution, the script will automatically open the generated FASTA file using the default system application for viewing.
 
+
+### Questions
+If you have any questions or encounter issues, don't hesitate to reach out.
