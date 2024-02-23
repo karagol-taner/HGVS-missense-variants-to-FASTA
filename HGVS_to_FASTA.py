@@ -41,11 +41,38 @@ if biopython_installed or importlib.import_module("Bio"):
 # Protein name
 protein_name = input("Enter the protein/gene name for FASTA header line: >").strip().upper()
 
-# Wild-type protein sequence of the protein
-wild_type_sequence = input("Enter the wild-type nucleotid/protein sequence of the protein. (eg. MQRVNMIMAESPGLITICLLGYLLSAECTVFLDHENANKILNRPKRY...) = ").strip()
+# Prompt the user to choose input method
+input_method = input("Choose input method for sequences (1 - manual input, 2 - input from file): ").strip()
+
+# Initialize wild-type nucleotide sequence
+wild_type_sequence = ""
+
+# Input from file
+if input_method == '2':
+    file_path = input("Enter the path to the file containing the nucleotide sequence (eg. C:\\wild_type.fasta): ").strip()
+    try:
+        with open(file_path, "r") as file:
+            # Parse the FASTA file to extract the nucleotide sequence
+            for record in SeqIO.parse(file, "fasta"):
+                if not wild_type_sequence:
+                    wild_type_sequence = str(record.seq).upper()
+                else:
+                    print("Error: Multiple sequences found in the input file. Please ensure the file contains only one sequence.")
+                    exit()
+    except FileNotFoundError:
+        print("File not found. Please make sure the file path is correct.")
+        exit()
+
+# Manual input
+elif input_method == '1':
+    wild_type_sequence = input("Enter the wild-type nucleotide sequence of the protein: ").strip().upper()
+
+else:
+    print("Invalid input method. Please choose either 1 or 2.")
+    exit()
 
 # Prompt the user to choose input method
-input_method = input("Choose input method for missense variants in HGSV format (1 - manual input, 2 - input from file): ").strip()
+input_method = input("Choose input method for missense variants in HGVS format (1 - manual input, 2 - input from file): ").strip()
 
 # Initialize variant_notations list
 variant_notations = []
@@ -80,7 +107,7 @@ print("\nEntered Sequence and Variants:")
 print("")
 print("Protein Name: >", protein_name)
 print("")
-print("Wild-type sequence:", wild_type_sequence)
+print("Wild-type nucleotide sequence:", wild_type_sequence)
 print("")
 print("Variants:")
 for variant in variant_notations:
@@ -101,34 +128,29 @@ for notation in variant_notations:
     ref_nucleotide = notation[-3]  # Reference nucleotide (e.g., A)
     var_nucleotide = notation[-1]  # Variant nucleotide (e.g., T)
     
-    # Translate reference and variant nucleotides to amino acids
-    ref_aa = Seq(ref_nucleotide).translate()
-    var_aa = Seq(var_nucleotide).translate()
+    # Apply nucleotide change to wild-type sequence
+    variant_sequence = wild_type_sequence[:position-1] + var_nucleotide + wild_type_sequence[position:]
 
-    # Apply amino acid change to wild-type sequence
-    variant_sequence = wild_type_sequence[:position-1] + str(var_aa) + wild_type_sequence[position:]
-
-    # Store variant protein sequence in dictionary
+    # Store variant nucleotide sequence in dictionary
     variant_sequences[notation] = variant_sequence
 
-# Print variant protein sequences
+# Print variant nucleotide sequences
 for notation, sequence in variant_sequences.items():
     print(f"{notation}: {sequence}")
 
-    
-# Get the log file name from user input
-log_file_path = input("Enter the name for the FASTA file (eg. variants.fasta): ").strip()
+# Get the output file name from user input
+output_file_path = input("Enter the name for the FASTA file (eg. variants.fasta): ").strip()
 
-# Save variant protein sequences to the log file in FASTA format
-with open(log_file_path, "w") as f:
-    f.write(f"> Wild-type_{protein_name}\n")
+# Save variant nucleotide sequences to the output file in FASTA format
+with open(output_file_path, "w") as f:
+    f.write(f">{protein_name}\n")
     f.write(wild_type_sequence + "\n")
 
     for i, (notation, sequence) in enumerate(variant_sequences.items(), start=1):
-        f.write(f"> Variant_{i}_{protein_name}\n")
+        f.write(f">{protein_name}_variant_{i}\n")
         f.write(sequence + "\n")
 
-print(f"\nVariant protein sequences saved to {log_file_path}")
+print(f"\nVariant nucleotide sequences saved to {output_file_path}")
 
 # Open the FASTA file using the default system application
 try:
@@ -142,4 +164,3 @@ except Exception as e:
     print(f"Error opening the log file: {e}")
 
 input("\nPress Enter to exit...")
-
