@@ -36,3 +36,6 @@ If the script fails to automatically install Biopython, you can install it manua
 
 ### Questions
 If you have any questions or encounter issues, don't hesitate to reach out.
+
+### License
+This project is licensed under the  GPU3.0 License - see the LICENSE file for details.
