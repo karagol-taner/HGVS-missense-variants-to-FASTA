@@ -4,7 +4,7 @@ This project is a Python script that allows researchers to generate variant prot
 
 
 ### Requirements
-Ensure you have Python 3.x installed on your system. 
+If you want to run the script natively on your local computer, ensure you have Python 3.x installed on your system. 
 If Biopython is not already installed, the script will prompt you to install it automatically. 
 If the script fails to automatically install Biopython, you can install it manually using the following steps:
 
