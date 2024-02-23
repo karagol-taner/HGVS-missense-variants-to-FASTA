@@ -16,8 +16,8 @@ If the script fails to automatically install Biopython, you can install it manua
    ```
 
 ### Usage
-1. Running the Script: Execute the HGVS_to_FASTA.py script using Python. Follow the prompts to input the required information, including the protein name, wild-type sequence, variant notations, and the desired filename for the output FASTA file.
-   - ! NEW UPDATE Input types
+1. Running the Script: Execute the HGVS_to_FASTA.py script using Python. Follow the prompts to input the required information, including the protein/gene name, wild-type sequence, variant notations, and the desired filename for the output FASTA file.
+   - ! NEW UPDATE Input types for variants added
    - 1-Manual Imput
    - 2-File Input: Users can input variant notations from a text file, making it convenient to handle large lists of variants.
      If you choose to input variant notations from a text file, the file should contain the variant notations in the following format:
