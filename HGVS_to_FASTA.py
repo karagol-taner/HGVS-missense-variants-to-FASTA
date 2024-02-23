@@ -44,12 +44,36 @@ protein_name = input("Enter the protein name for FASTA header line: >").strip().
 # Wild-type protein sequence of the protein
 wild_type_sequence = input("Enter the wild-type protein sequence of the protein. (eg. MQRVNMIMAESPGLITICLLGYLLSAECTVFLDHENANKILNRPKRY...) = ").strip()
 
-# Prompt the user to input all variant notations, separated by commas
-variant_input = input("Enter all missense variant notations in HGVS, separated by commas (eg. c.107A>C, c.112A>C, ...) = ").strip()
-variant_notations = [notation.strip() for notation in variant_input.split(",")]
+# Prompt the user to choose input method
+input_method = input("Choose input method for missense variants in HGVS format (1 - manual input, 2 - input from file): ").strip()
 
-# Dictionary to store variant protein sequences
-variant_sequences = {}
+# Initialize variant_notations list
+variant_notations = []
+
+# Input from file
+if input_method == '2':
+    print(" ")
+    print("The text file must contain variant notations in the following format: ")
+    print("c.92A>T")
+    print("c.150G>A")
+    print("...")    
+    print(" ") 
+    file_path = input("Enter the path to the file containing variant notations (eg.C:\variantHGVS.txt): ").strip()
+    try:
+        with open(file_path, "r") as file:
+            variant_notations = [line.strip() for line in file.readlines()]
+    except FileNotFoundError:
+        print("File not found. Please make sure the file path is correct.")
+        exit()
+
+# Manual input
+elif input_method == '1':
+    variant_input = input("Enter all missense variant notations in HGVS, separated by commas (eg. c.107A>C, c.112A>C, ...): ").strip()
+    variant_notations = [notation.strip() for notation in variant_input.split(",")]
+
+else:
+    print("Invalid input method. Please choose either 1 or 2.")
+    exit()
 
 # Print the wild-type sequence and the list of variants entered by the user for verification
 print("\nEntered Sequence and Variants:")
@@ -67,6 +91,9 @@ print("\nWarning: Please check the information thoroughly before proceeding.")
 input("To continue, press any button...")
 print("")
 
+# Initialize variant_sequences dictionary
+variant_sequences = {}
+
 # Iterate over each variant notation
 for notation in variant_notations:
     # Parse nucleotide change from the variant notation
@@ -83,6 +110,11 @@ for notation in variant_notations:
 
     # Store variant protein sequence in dictionary
     variant_sequences[notation] = variant_sequence
+
+# Print variant protein sequences
+for notation, sequence in variant_sequences.items():
+    print(f"{notation}: {sequence}")
+
 
 # Print variant protein sequences
 for notation, sequence in variant_sequences.items():
@@ -114,4 +146,3 @@ except Exception as e:
     print(f"Error opening the log file: {e}")
 
 input("\nPress Enter to exit...")
-
