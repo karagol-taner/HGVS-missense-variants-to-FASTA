@@ -17,10 +17,21 @@ If the script fails to automatically install Biopython, you can install it manua
 
 ### Usage
 1. Running the Script: Execute the HGVS_to_FASTA.py script using Python. Follow the prompts to input the required information, including the protein name, wild-type sequence, variant notations, and the desired filename for the output FASTA file.
+   - ! NEW UPDATE Input types
+   - 1-Manuel Imput
+   - 2-File Input: Users can input variant notations from a text file, making it convenient to handle large lists of variants.
+     If you choose to input variant notations from a text file, the file should contain the variant notations in the following format:
+     
+      ```
+      c.92A>T
+      c.150G>A
+      ...
+      ```
 
-2. Review and Save: Verify the entered information before proceeding. Once confirmed, the script will generate the variant protein sequences and save them to the specified file in FASTA format.
 
-3. Viewing Results: After execution, the script will automatically open the generated FASTA file using the default system application for viewing.
+3. Review and Save: Verify the entered information before proceeding. Once confirmed, the script will generate the variant protein sequences and save them to the specified file in FASTA format.
+
+4. Viewing Results: After execution, the script will automatically open the generated FASTA file using the default system application for viewing.
 
 
 ### Questions
