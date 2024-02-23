@@ -58,7 +58,7 @@ if input_method == '2':
     print("c.150G>A")
     print("...")    
     print(" ") 
-    file_path = input("Enter the path to the file containing variant notations (eg.C:\variantHGVS.txt): ").strip()
+    file_path = input("Enter the path to the file containing variant notations (eg. C:\\variantHGVS.txt): ").strip()
     try:
         with open(file_path, "r") as file:
             variant_notations = [line.strip() for line in file.readlines()]
