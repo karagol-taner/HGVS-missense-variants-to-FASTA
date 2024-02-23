@@ -20,7 +20,7 @@ If the script fails to automatically install Biopython, you can install it manua
     - Option 1: You can run the script directly from Google Colab: [HGVS-to-FASTA.ipynb on Google Colab](https://colab.research.google.com/drive/1yiqgo0joTMsBdOz57pTI6i5LgBDWO3zw?usp=sharing).
     
     - Option 2: Execute the HGVS_to_FASTA.py script using Python. 
-    For runing the script you can download the [.py file](HGVS_to_FASTA.py) and open a terminal/command prompt. Navigate to the directory where the .py file is located, and then executing the script using the following command:
+    For runing the script you can download the [.py file](HGVS_to_FASTA.py) and open a terminal/command prompt. Navigate to the directory where the .py file is located, and then execute the script using the following command:
       ```
       python HGVS_to_FASTA.py
       ```
