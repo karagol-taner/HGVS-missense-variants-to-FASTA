@@ -31,7 +31,7 @@ If the script fails to automatically install Biopython, you can install it manua
       the following format for aminoacid:
        ```
       p.Arg107Cys
-      p.Arg112Cy
+      p.Arg112Cys
       ...
       ```
 
