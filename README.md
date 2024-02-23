@@ -1,6 +1,6 @@
 # HGVS missense variants to FASTA
 
-This project is a Python script that allows researchers to generate variant protein sequences in FASTA format based on wild-type protein sequences and variant notations in HGVS format. This tool is particularly useful for researchers and bioinformaticians working with protein sequences to study the effects of missense variants.
+This project is a Python script that allows researchers to generate variant protein and nucleotide sequences in FASTA format based on wild-type protein/nucleotide sequences and variant notations in HGVS format. This tool is particularly useful for researchers and bioinformaticians working with protein sequences to study the effects of missense variants.
 
 
 ### Requirements
@@ -20,16 +20,22 @@ If the script fails to automatically install Biopython, you can install it manua
    - ! NEW UPDATE Input types for variants
    - 1-Manual Input
    - 2-File Input: Users can input variant notations from a text file, making it convenient to handle large lists of variants.
-     If you choose to input variant notations from a text file, the file should contain the variant notations in the following format:
+     If you choose to input variant notations from a text file, the file should contain the variant notations in the following format for nucleotide:
      
       ```
       c.92A>T
       c.150G>A
       ...
       ```
+      
+      the following format for aminoacid:
+       ```
+      p.Arg107Cys
+      p.Arg112Cy
+      ...
+      ```
 
-
-3. Review and Save: Verify the entered information before proceeding. Once confirmed, the script will generate the variant protein sequences and save them to the specified file in FASTA format.
+3. Review and Save: Verify the entered information before proceeding. Once confirmed, the script will generate the variant protein/nucleotide sequences and save them to the specified file in FASTA format.
 
 4. Viewing Results: After execution, the script will automatically open the generated FASTA file using the default system application for viewing.
 
