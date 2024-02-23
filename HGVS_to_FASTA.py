@@ -155,11 +155,11 @@ print(f"\nVariant nucleotide sequences saved to {output_file_path}")
 # Open the FASTA file using the default system application
 try:
     if os.name == "posix":  # Linux or macOS
-        subprocess.run(["xdg-open", log_file_path], check=True)
+        subprocess.run(["xdg-open", output_file_path], check=True)
     elif os.name == "nt":  # Windows
-        os.startfile(log_file_path)
+        os.startfile(output_file_path)
     else:
-        print(f"Unsupported operating system. Please navigate to {log_file_path} manually.")
+        print(f"Unsupported operating system. Please navigate to {output_file_path} manually.")
 except Exception as e:
     print(f"Error opening the log file: {e}")
 
