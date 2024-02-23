@@ -45,7 +45,7 @@ protein_name = input("Enter the protein name for FASTA header line: >").strip().
 wild_type_sequence = input("Enter the wild-type protein sequence of the protein. (eg. MQRVNMIMAESPGLITICLLGYLLSAECTVFLDHENANKILNRPKRY...) = ").strip()
 
 # Prompt the user to choose input method
-input_method = input("Choose input method for missense variants in HGVS format (1 - manual input, 2 - input from file): ").strip()
+input_method = input("Choose input method for missense variants in HGSV format (1 - manual input, 2 - input from file): ").strip()
 
 # Initialize variant_notations list
 variant_notations = []
@@ -58,7 +58,7 @@ if input_method == '2':
     print("c.150G>A")
     print("...")    
     print(" ") 
-    file_path = input("Enter the path to the file containing variant notations (eg. C:\\variantHGVS.txt): ").strip()
+    file_path = input("Enter the path to the file containing variant notations (eg.C:\variantHGVS.txt): ").strip()
     try:
         with open(file_path, "r") as file:
             variant_notations = [line.strip() for line in file.readlines()]
@@ -115,10 +115,6 @@ for notation in variant_notations:
 for notation, sequence in variant_sequences.items():
     print(f"{notation}: {sequence}")
 
-
-# Print variant protein sequences
-for notation, sequence in variant_sequences.items():
-    print(f"{notation}: {sequence}")
     
 # Get the log file name from user input
 log_file_path = input("Enter the name for the FASTA file (eg. variants.fasta): ").strip()
@@ -129,7 +125,7 @@ with open(log_file_path, "w") as f:
     f.write(wild_type_sequence + "\n")
 
     for i, (notation, sequence) in enumerate(variant_sequences.items(), start=1):
-        f.write(f"> Variant_{i}_{protein_name}_{notation}\n")
+        f.write(f"> Variant_{i}_{protein_name}\n")
         f.write(sequence + "\n")
 
 print(f"\nVariant protein sequences saved to {log_file_path}")
