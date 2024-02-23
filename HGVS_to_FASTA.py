@@ -39,10 +39,10 @@ if biopython_installed or importlib.import_module("Bio"):
     from Bio import SeqIO
 
 # Protein name
-protein_name = input("Enter the protein name for FASTA header line: >").strip().upper()
+protein_name = input("Enter the protein/gene name for FASTA header line: >").strip().upper()
 
 # Wild-type protein sequence of the protein
-wild_type_sequence = input("Enter the wild-type protein sequence of the protein. (eg. MQRVNMIMAESPGLITICLLGYLLSAECTVFLDHENANKILNRPKRY...) = ").strip()
+wild_type_sequence = input("Enter the wild-type nucleotid/protein sequence of the protein. (eg. MQRVNMIMAESPGLITICLLGYLLSAECTVFLDHENANKILNRPKRY...) = ").strip()
 
 # Prompt the user to choose input method
 input_method = input("Choose input method for missense variants in HGSV format (1 - manual input, 2 - input from file): ").strip()
@@ -142,3 +142,4 @@ except Exception as e:
     print(f"Error opening the log file: {e}")
 
 input("\nPress Enter to exit...")
+
