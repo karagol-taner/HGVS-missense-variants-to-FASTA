@@ -4,7 +4,8 @@ This project is a Python script that allows researchers to generate variant prot
 
 
 ### Requirements
-If you want to run the script natively on your local computer, ensure you have Python 3.x installed on your system. 
+If you want to run the script natively on your local computer (Option 1), ensure you have Python 3.x installed on your system. 
+
 If Biopython is not already installed, the script will prompt you to install it automatically. 
 If the script fails to automatically install Biopython, you can install it manually using the following steps:
 
@@ -17,7 +18,7 @@ If the script fails to automatically install Biopython, you can install it manua
 
 ### Usage
 1. Follow the prompts to input the required information, including the protein/gene name, wild-type sequence, variant notations, and the desired filename for the output FASTA file. For running the Python script:
-    - Option 1 (for all platforms): Install the package via pip, and use the command HGSVtoFASTA directly:
+    - Option 1 (RECOMMENDED, for all platforms): Install the package via pip, and use the command HGSVtoFASTA directly:
       ```
       pip install HGVStoFASTA
       HGVStoFASTA
@@ -25,7 +26,7 @@ If the script fails to automatically install Biopython, you can install it manua
       
     - Option 2 (for all platforms): You can run the script directly from Google Colab: [HGVS-to-FASTA.ipynb on Google Colab](https://colab.research.google.com/drive/1yiqgo0joTMsBdOz57pTI6i5LgBDWO3zw?usp=sharing).
   
-    - Option 3 (for all platforms): You can directly run this .EXE file: [Download .EXE file](https://colab.research.google.com/drive/1yiqgo0joTMsBdOz57pTI6i5LgBDWO3zw?usp=sharing).
+    - Option 3 (for Windows): You can directly run this .EXE file: [Download .EXE file](https://colab.research.google.com/drive/1yiqgo0joTMsBdOz57pTI6i5LgBDWO3zw?usp=sharing).
   
 3. Input types for variants
    - 1-Manual Input
