@@ -17,13 +17,15 @@ If the script fails to automatically install Biopython, you can install it manua
 
 ### Usage
 1. Follow the prompts to input the required information, including the protein/gene name, wild-type sequence, variant notations, and the desired filename for the output FASTA file. For running the Python script:
-    - Option 1: Install the package via pip, and use the command HGSVtoFASTA directly:
+    - Option 1 (for all platforms): Install the package via pip, and use the command HGSVtoFASTA directly:
       ```
       pip install HGVStoFASTA
       HGVStoFASTA
       ```
       
-    - Option 2: You can run the script directly from Google Colab: [HGVS-to-FASTA.ipynb on Google Colab](https://colab.research.google.com/drive/1yiqgo0joTMsBdOz57pTI6i5LgBDWO3zw?usp=sharing).
+    - Option 2 (for all platforms): You can run the script directly from Google Colab: [HGVS-to-FASTA.ipynb on Google Colab](https://colab.research.google.com/drive/1yiqgo0joTMsBdOz57pTI6i5LgBDWO3zw?usp=sharing).
+  
+    - Option 3 (for all platforms): You can directly run this .EXE file: [Download .EXE file](https://colab.research.google.com/drive/1yiqgo0joTMsBdOz57pTI6i5LgBDWO3zw?usp=sharing).
   
 3. Input types for variants
    - 1-Manual Input
