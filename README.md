@@ -2,6 +2,24 @@
 
 This project is a Python script that allows researchers to generate variant protein and nucleotide sequences in FASTA format based on wild-type protein/nucleotide sequences and variant notations in HGVS format. This tool is particularly useful for researchers and bioinformaticians working with protein sequences to study the effects of missense variants.
 
+### Installation
+
+- Option 1 (RECOMMENDED, for all platforms): You can install the package via pip (if you have Python 3.x on your system), and use the command HGSVtoFASTA directly:
+```
+pip install HGVStoFASTA      
+```
+```
+HGVStoFASTA
+```
+
+
+- Option 2 (for all platforms): You can run the script directly from Google Colab: [HGVS-to-FASTA.ipynb on Google Colab](https://colab.research.google.com/drive/1yiqgo0joTMsBdOz57pTI6i5LgBDWO3zw?usp=sharing).
+  
+- Option 3 (for Windows): You can directly run this .EXE file: [Download .EXE file](https://drive.google.com/file/d/1rrDwS52b_H1F8sdb93SGLpxQ4JhbRyBB/view?usp=sharing).
+
+Latest version on PyPI:
+
+[![PyPI version](https://badge.fury.io/py/HGVStoFASTA.svg)](https://badge.fury.io/py/HGVStoFASTA)
 
 ### Requirements
 If you want to run the script natively on your local computer (Option 1), ensure you have Python 3.x installed on your system. 
@@ -16,18 +34,12 @@ If the script fails to automatically install Biopython, you can install it manua
    pip install biopython
    ```
 
-### Usage
-1. Follow the prompts to input the required information, including the protein/gene name, wild-type sequence, variant notations, and the desired filename for the output FASTA file. For running the Python script:
-    - Option 1 (RECOMMENDED, for all platforms): You can install the package via pip, and use the command HGSVtoFASTA directly:
-      ```
-      pip install HGVStoFASTA
-      HGVStoFASTA
-      ```
-      
-    - Option 2 (for all platforms): You can run the script directly from Google Colab: [HGVS-to-FASTA.ipynb on Google Colab](https://colab.research.google.com/drive/1yiqgo0joTMsBdOz57pTI6i5LgBDWO3zw?usp=sharing).
-  
-    - Option 3 (for Windows): You can directly run this .EXE file: [Download .EXE file](https://drive.google.com/file/d/1rrDwS52b_H1F8sdb93SGLpxQ4JhbRyBB/view?usp=sharing).
-  
+### Usage/Features
+1. Cross-Platform: Supports Windows, Mac, and Linux. Compatible with High Performance Computing (HPC).
+
+2. Quick Start: Follow the prompts to input the required information, including the protein/gene name, wild-type sequence, variant notations, and the desired filename for the output FASTA file. 
+
+
 3. Input types for variants
    - 1-Manual Input
    - 2-File Input: Users can input variant notations from a text file, making it convenient to handle large lists of variants.
