@@ -4,7 +4,7 @@ This project is a Python script that allows researchers to generate variant prot
 
 ### Installation
 
-- Option 1 (RECOMMENDED, for all platforms): You can install the package via pip (if you have Python 3.x on your system), and use the command HGSVtoFASTA directly:
+- Option 1 (RECOMMENDED, for all platforms): You can install the package via pip (if you have Python 3.x on your system), and use the command HGVStoFASTA directly:
 ```
 pip install HGVStoFASTA      
 ```
