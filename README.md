@@ -2,7 +2,8 @@
 
 This project is a Python script that allows researchers to generate variant protein and nucleotide sequences in FASTA format based on wild-type protein/nucleotide sequences and variant notations in HGVS format. This tool is particularly useful for researchers and bioinformaticians working with protein sequences to study the effects of missense variants.
 
-DOI: [![DOI](https://zenodo.org/badge/762237493.svg)](https://zenodo.org/doi/10.5281/zenodo.10751304)
+DOI: 
+[![DOI](https://zenodo.org/badge/762237493.svg)](https://zenodo.org/doi/10.5281/zenodo.10751304)
 
 ### Installation
 
