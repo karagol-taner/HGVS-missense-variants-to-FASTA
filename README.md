@@ -4,7 +4,9 @@ This project is a Python script that allows researchers to generate variant prot
 
 DOI/Cite:
 
-[![DOI](https://zenodo.org/badge/762237493.svg)](https://zenodo.org/doi/10.5281/zenodo.10751304)
+Karagol, A., & Karagol, T. (2024). An Evolutionary Statistics Toolkit for Simplified Sequence Analysis on Web with Client-Side Processing. bioRxiv, 2024-08. doi: https://doi.org/10.1101/2024.08.01.606148
+
+Zenodo: [![DOI](https://zenodo.org/badge/762237493.svg)](https://zenodo.org/doi/10.5281/zenodo.10751304)
 
 ### Installation
 
