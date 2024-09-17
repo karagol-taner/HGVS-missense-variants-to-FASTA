@@ -23,6 +23,8 @@ HGVStoFASTA
   
 - Option 3 (for Windows): You can directly run this .EXE file: [Download .EXE file](https://drive.google.com/file/d/1rrDwS52b_H1F8sdb93SGLpxQ4JhbRyBB/view?usp=sharing).
 
+- Option 4 (for all platforms): This tool is also available on web: [www.tanerkaragol.com/hgvs-to-fasta](https://www.tanerkaragol.com/hgvs-to-fasta)
+
 Latest version on PyPI:
 
 [![PyPI version](https://badge.fury.io/py/HGVStoFASTA.svg)](https://badge.fury.io/py/HGVStoFASTA)
